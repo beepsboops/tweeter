@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of header"](link-here)
-!["Screenshot of tweet box"](link-here)
+!["Screenshot of header"](https://github.com/beepsboops/tweeter/blob/master/docs/header.jpg)
+!["Screenshot of tweet box"](https://github.com/beepsboops/tweeter/blob/master/docs/tweet-box.jpg)
 
 ## Getting Started
 
