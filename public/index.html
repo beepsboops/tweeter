@@ -7,23 +7,117 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Tweet Container CSS -->
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav class="nav-bar">
+      <div>
+        <span>tweeter</span>
+      </div> 
+
+      <div class="write-new-tweet">
+        <div>
+          <span<p><strong>Write</strong> a new tweet</p></span>
+        </div>
+        <div>
+          <i class="fas fa-angle-double-down"></i>
+        </div>
+      </div>
     </nav>
 
+    <!-- Header -->
+    <header class="header-main">
+      <div class="profile-avatar">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <div class="profile-name">
+        <h2>Max Power</h2>
+      </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+
+    <!-- New Tweet Section -->
+    <section class="new-tweet">
+      <div id="error-container"></div>
+      <form method="POST" action="/tweets">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div class="button-counter">
+          <button class="button" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+
+    <!-- Tweet Container Original Embedded-->
+      <section id="tweet-container">
+
+    <!-- Tweet Container Original Embedded-->
+    <!-- <article class="tweet-container">
+      
+      <header class="tweet-header">
+        <div class="avatar-name">
+          <img src="/images/profile-hex.png">
+          <p>Rhoda Jacobs</p>
+        </div>
+        <div class="handle">
+          <p>@MrsJacobs</p>
+        </div>
+      </header>
+
+      <section class="tweet-message">
+        <p>Hello world!!!</p>
+      </section>
+
+      <footer class="tweet-footer">
+        <div>
+          <p>Date info here</p>
+          <time class="timeago" datetime="2019-11-27T09:24:17Z">November 27, 2019</time>
+        </div>
+        <div class="tweet-icons">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </div>
+      </footer>
+
+    </article> -->
+
+  </main>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
