@@ -74,10 +74,6 @@ $(document).ready(function() {
     // Form validation - check if tweets are too short, null, too long
     // Store value of tweet form input
     const tweetFormInput = document.getElementById("tweet-text").value;
-    
-    // Check we're getting the right data
-    // console.log("Submit Handler: tweetForm:", tweetFormInput)
-    // console.log("Submit Handler: typeof tweetFormInput:", typeof tweetFormInput)
 
     // Error if tweet is empty or null
     if (!tweetFormInput.length) {
@@ -95,12 +91,6 @@ $(document).ready(function() {
       
       // Serialize form data and sent to server as query string
       const submittedTweet = $(this).serialize();
-      
-      // Check what's outputted with serialize function
-      // console.log("submittedTweet:", submittedTweet)
-
-      // Confirm what type of data
-      // console.log("typeof:", typeof submittedTweet)
 
       // Use the jQuery library to submit a POST request that sends the serialized data to the server
       $.ajax({
